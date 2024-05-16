@@ -10,7 +10,7 @@ $estudiante1 = array(
     "dni"=>"42558996",
     "edad"=>27,
     "fechanacimiento"=>"2000-11-05",
-    "nombre"=>"pedro",
+    "nombres"=>"pedro",
     "apellidos"=> "paredes acero", 
     "semestre"=>3,
     "deuda"=>100.50,
@@ -24,7 +24,7 @@ $estudiante1 = array(
     "dni"=>"42558996",
     "edad"=>24,
     "fechanacimiento"=>"2003-11-05",
-    "nombre"=>"Jesus",
+    "nombres"=>"Jesus",
     "apellidos"=> "Quispe zapata", 
     "semestre"=>3,
     "deuda"=>150.50,
@@ -37,7 +37,7 @@ $estudiante1 = array(
     "dni"=>"42558996",
     "edad"=>25,
     "fechanacimiento"=>"2021-11-05",
-    "nombre"=>"Juan",
+    "nombres"=>"Juan",
     "apellidos"=> "chambilla acero", 
     "semestre"=>3,
     "deuda"=>150.50,
@@ -54,16 +54,22 @@ foreach($estudiantes as $key1=>$estudiante) {
     }
 }
 echo "------------------------------------\n";
-for($i=0 ;$i <=count($estudiantes)-1;$i++){
+for($i=0 ;$i<=count($estudiantes)-1;$i++) {
     echo "Estudiante N° ".($i+1)."\n";
-    echo "dni - ".$estudiante[$i]["dni"]."\n";
-    echo "edad - ".$estudiante[$i]["edad"]."\n";
-    echo "fechanacimiento - ".$estudiante[$i]["fechanacimiento"]."\n";
-    echo "nombres - ".$estudiante[$i]["nombres"]."\n";
-    echo "apellidos - ".$estudiante[$i]["apellidos"]."\n";
-    echo "semestre - ".$estudiante[$i]["semestre"]."\n";
-    echo "deuda - ".$estudiante[$i]["deuda"]."\n";
-    echo "notafinal - ".$estudiante[$i]["notafinal"]."\n";
+    echo "dni - ".$estudiantes[$i]["dni"]."\n";
+    echo "edad - ".$estudiantes[$i]["edad"]."\n";
+    echo "fechanacimiento - ".$estudiantes[$i]["fechanacimiento"]."\n";
+    echo "nombres - ".$estudiantes[$i]["nombres"]."\n";
+    echo "apellidos - ".$estudiantes[$i]["apellidos"]."\n";
+    echo "semestre - ".$estudiantes[$i]["semestre"]."\n";
+    echo "deuda - ".$estudiantes[$i]["deuda"]."\n";
+    echo "notasfinal - ".$estudiantes[$i]["notasfinal"]."\n";
 }
-
+$estudiante3["notasfinal"] = 15.6;
+$equipo1 = ["messi","cueva","neymar"];
+$equipo2 = ["advincula","Lewandoski","ronaldinho"];
+$equipos = array_merge($equipo1,$equipo2);
+foreach($equipos as $key=>$equipo){
+    echo $equipo."\n";
+}
 ?>
