@@ -24,8 +24,7 @@ class Instrumento {
         return "No";
     }
     public function validarCuerdas(){
-        return $this->existeCuerdas();
+        return $this->existenCuerdas();
     }
- 
 }
 ?>
