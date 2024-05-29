@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit; 
     }
     if (empty($nombre) || empty($apellido) || empty($edad) || empty($talla) || empty($peso)) {
-
         echo "Todos los campos son obligatorios." ;
        }
 
@@ -64,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Fue registrado correctamente.";
     }
     catch(Exception $e) {
+        $conn->rollBack();
         echo "Error : ".$e->getMessage();
     }
     
