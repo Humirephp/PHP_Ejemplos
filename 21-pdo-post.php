@@ -28,6 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Ingrese un nombre y apellido de al menos 3 caracteres.";
         exit; 
     }
+    if (empty($nombre) || empty($apellido) || empty($edad) || empty($talla) || empty($peso)) {
+
+        echo "Todos los campos son obligatorios." ;
+       }
 
     
     if($tos== 1 || $fiebre == 1 || $disnea==1 || $dolor_muscular==1 ||
