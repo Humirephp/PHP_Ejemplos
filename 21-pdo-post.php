@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $servername = "localhost";
-    $username = "root";
+    $username = "celestino";
     $password ="root";    
     $dbname = "covid";    
     try{
