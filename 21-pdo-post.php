@@ -58,18 +58,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             '$tos', '$fiebre', '$disnea', '$dolor_muscular','$gripe'
             , '$Presion_alta', '$Fatiga', '$Garraspera', '$fecha', '$resultado');";
 
-        $conn->exec($sql);    
+        $conn->exec($sql);
+        $ultimo_id = $conn->lastInsertId();
+        $consulta = $conn->query("SELECT * FROM pacientes WHERE id = $ultimo_id");
+        $fila = $consulta->fetch(PDO::FETCH_ASSOC);
         $conn->commit();
-        echo "Fue registrado correctamente.";
+        echo "Fue registrado correctamente. Última fila insertada: " . json_encode($fila);
     }
     catch(Exception $e) {
         $conn->rollBack();
         echo "Error : ".$e->getMessage();
     }
-    $ultimo_id = $conn->lastInsertId();
-    $consulta = $conn->query("SELECT * FROM pacientes WHERE id = $ultimo_id");
-    $fila = $consulta->fetch(PDO::FETCH_ASSOC);
-    $conn->commit();
-    echo "Fue registrado correctamente. Última fila insertada: " . json_encode($fila);
+    
 }
 ?>
