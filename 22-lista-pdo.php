@@ -52,7 +52,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "covid";
+        $dbname = "base covid";
 
         // Crear la conexión a la base de datos
         $conn = new mysqli($servername, $username, $password, $dbname);
