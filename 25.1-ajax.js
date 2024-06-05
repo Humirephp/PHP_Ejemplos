@@ -21,17 +21,29 @@ function buscarPacientes(){
     
     return;
 }
-function agregarFilas(Id,paciente){
-    const html =
+function agregarFilas(id,paciente) {
+    const html=
     "<tr>"+
     "<td>"+paciente.nombres+"</td>"+
-    "<td>"+paciente.edad+"</td>"+
+    "<td>"+paciente.edad+"</td>"+    
     "<td>"+paciente.talla_m+"</td>"+
     "<td>"+paciente.peso_kg+"</td>"+
     "<td>"+paciente.sintoma_tos+"</td>"+
     "<td>"+paciente.sintoma_fiebre+"</td>"+
     "<td>"+paciente.sintoma_disnea+"</td>"+
-    "<td><button type='button'>Editar</button></td>"+
+    "<td><button type='button' onclick=editar('"+paciente.nombres+"','"+paciente.edad+"');>Editar</button></td>"+
     "</tr>";
-    $(Id + " tr:Last").after(html);
+    $(id+" tr:last").after(html);
+}
+ 
+function editar(nombres,edad,talla_m,peso_kg,sintoma_tos,sintoma_fiebre,sintoma_disnea) {
+    $('#exampleModal').modal('show');    
+    $("#nombre2").val(nombres);
+    $("#edad3").val(edad);
+    $("#talla4").val(talla_m);
+    $("#peso5").val(peso_kg);
+    $("#tos6").val(sintoma_tos);
+    $("#fiebre7").val(sintoma_fiebre);
+    $("#disnea8").val(sintoma_disnea);
+
 }
