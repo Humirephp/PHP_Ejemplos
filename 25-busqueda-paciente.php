@@ -8,7 +8,7 @@
 <body>
     <center><h1>Busqueda de Pacientes</h1></center>
     <!-- <forn action="22.1-consulta-pdo.php" method="POST"> -->
-        <imput type="text" placeholder="Escribe aqui" name="nombre" id="nombre" /><br>
+        <input type="text" placeholder="Escribe aqui" name="nombre" id="nombre" /><br>
         <label id="tos" name="tos">Tos</label><input type="checkbox" for="tos">
         <button type="button" onclick="buscarPacientes();">Buscar</button>
         <table style="border: 1px solid black;">

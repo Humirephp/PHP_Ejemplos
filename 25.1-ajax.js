@@ -8,7 +8,7 @@ function buscarPacientes(){
         url :"26-ajax-pdo.php",
         type : "post",
         data: datos,
-        success : function(arg){
+        success : function(result){
             console.log(result);
         }
     })
