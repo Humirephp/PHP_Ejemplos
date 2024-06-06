@@ -21,6 +21,11 @@
             <td>Tos</td>
             <td>Fiebre</td>
             <td>Disnea</td>
+            <td>DolorMuscular</td>
+            <td>Gripe</td>
+            <td>PresionAlta</td>
+            <td>Fatiga</td>
+            <td>Garraspera</td>
             <td>Acciones</td>
         </tr>          
     </table>
@@ -59,17 +64,23 @@
                     <input type="text" class="form-control" id="peso5" name="peso5"/>
     </div>
         <div class="modal-body">
-                    <label for="name" class="form-label">Tos:</label>
-                    <input type="text" class="form-control" id="tos6" name="tos6"/>
+        <label class="checkbox"><input type="checkbox" name="tos" id="sintoma_tos" value="1"> Tos</label><br>
+        <label class="checkbox"><input type="checkbox" name="fiebre" id="sintoma_fiebre" value="1"> Fiebre</label><br>
+        <label class="checkbox"><input type="checkbox" name="disnea" id="sintoma_disnea" value="1"> Disnea</label><br>
+        <label class="checkbox"><input type="checkbox" name="dolormuscular" id="dolor_muscular" value="1"> DolorMuscular</label><br>
+        <label class="checkbox"><input type="checkbox" name="gripe" id="sintoma_gripe" value="1"> Gripe</label><br>
+        <label class="checkbox"><input type="checkbox" name="presionalta" id="presion_alta" value="1"> PresionAlta</label><br>
+        <label class="checkbox"><input type="checkbox" name="fatiga" id="sintoma_fatiga" value="1"> Fatiga</label><br>
+        <label class="checkbox"><input type="checkbox" name="garraspera" id="sintoma_garraspera" value="1"> Garraspera</label><br>
     </div>
-        <div class="modal-body">
-                    <label for="name" class="form-label">Fiebre:</label>
-                    <input type="text" class="form-control" id="fiebre7" name="fiebre7"/>
-    </div>
-        <div class="modal-body">
-                    <label for="name" class="form-label">Disnea:</label>
-                    <input type="text" class="form-control" id="disnea8" name="disnea8"/>
-    </div>
+    <div class="modal-body">
+    <div style="text-align: center; margin-top: 20px;">
+    <button type="button" class="btn-accept"onclick="actualizar();"style="background-color: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Guardar</button>
+    <button type="button" class="btn-warming"onclick="cancelar();" style="background-color: #34495E; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Cancelar</button>
+
+</
+</div>
+
 </body>
 
 </html>
