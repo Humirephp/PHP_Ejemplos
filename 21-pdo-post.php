@@ -43,8 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $servername = "localhost";
     $username = "root";
-    $password ="root";    
-    $dbname = "base covid";    
+    $password ="800406_Humire";    
+    $dbname = "covid";    
     try{
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
         
@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Fue registrado correctamente. Última fila insertada: " . json_encode($fila);
     }
     catch(Exception $e) {
-        $conn->rollBack();
+        
         echo "Error : ".$e->getMessage();
     }
     

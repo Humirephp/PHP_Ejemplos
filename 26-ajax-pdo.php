@@ -2,9 +2,9 @@
 if ($_SERVER["REQUEST_METHOD"] =="POST") {
     try{
         $nombre = $_POST["nombre"];
-        $dsn="mysql:host=localhost;dbname=base covid";
+        $dsn="mysql:host=localhost;dbname=covid";
         $user ="root";//user : usuario
-        $pass="root";//pass :clave de usuario
+        $pass="800406_Humire";//pass :clave de usuario
         $do = new PDO($dsn, $user, $pass);
         $pacientes = $do->query("
          SELECT * FROM pacientes
