@@ -10,7 +10,7 @@ $id = intval($_GET['id']);
 // Datos de conexión a la base de datos
 $servername = "localhost";
 $username = "root";
-$password = "800406_Humire";
+$password = "";
 $dbname = "covid";
 
 // Conectar a la base de datos
